@@ -30,6 +30,15 @@
                     android:targetClass="com.android.settings.deviceinfo.Status" />
         </PreferenceScreen>
 
+        <!-- Razor Extra Info -->
+        <PreferenceScreen android:key="extrainfo"
+                android:title="@string/razorextrainfo"
+                android:summary="@string/razorextrainfo_summary">
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.settings"
+                    android:targetClass="com.android.settings.razor.extrainfo.MainActivity" />
+        </PreferenceScreen>
+
         <!-- Legal Information -->
         <PreferenceScreen
                 android:key="container"

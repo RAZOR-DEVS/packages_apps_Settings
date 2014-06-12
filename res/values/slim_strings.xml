@@ -1414,4 +1414,8 @@
     <!-- RazorOTA -->
     <string name="slimota_title">Razor OTA</string>
 
+    <!-- Razor Extra Info -->
+    <string name="razorextrainfo">Extra information</string>
+    <string name="razorextrainfo_summary">Display extra info for cpu, display, etc</string>
+
 </resources>
