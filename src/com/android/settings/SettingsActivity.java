@@ -1250,6 +1250,13 @@ public class SettingsActivity extends Activity
                     try {
                         supported = (getPackageManager().getPackageInfo("com.fusionjack.slimota", 0).versionCode > 0);
                     } catch (PackageManager.NameNotFoundException e) {
+
+                } else if (id == R.id.bitsyko_layers) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+
                     }
                     if (!supported) {
                         removeTile = true;
@@ -1414,3 +1421,4 @@ public class SettingsActivity extends Activity
         mResultIntentData = resultIntentData;
     }
 }
+
