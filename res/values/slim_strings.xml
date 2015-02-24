@@ -1404,12 +1404,14 @@
     <string name="changelog_razor_title">Changelog</string>
     <string name="changelog_razor_error">Unable to load changelog</string>
 
-
     <!-- Appops -->
     <string name="appops_manager_title">Appops</string>
     <string name="appops_manager_summary">Individually manage all apps permissions</string>
 
     <!-- SIM -->
     <string name="sim_no_number_set">No number assigned</string>
+
+    <!-- SlimOTA -->
+    <string name="slimota_title">Razor OTA</string>
 
 </resources>
