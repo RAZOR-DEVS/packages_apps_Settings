@@ -1406,4 +1406,7 @@
     <string name="appops_manager_title">Appops</string>
     <string name="appops_manager_summary">Individually manage all apps permissions</string>
 
+    <!-- SIM -->
+    <string name="sim_no_number_set">No number assigned</string>
+
 </resources>
