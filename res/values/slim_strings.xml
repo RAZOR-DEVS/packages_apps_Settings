@@ -953,7 +953,9 @@
     <!-- Recent panel -->
     <string name="recent_panel_category">Recent apps panel</string>
     <string name="general_recent_category">General</string>
+    <string name="stock_recent_category">Stock recents</string>
     <string name="slim_recent_category">Slim Recents</string>
+    
     <string name="use_slim_recents_title">Slim Recents</string>
     <string name="show_running_tasks_title">Only show running apps</string>
     <string name="recents_show_searchbar">Show search bar in recents menu</string>
