@@ -224,6 +224,7 @@
     <string name="header_category_personalization">Turbo ROM Settings</string>
     <string name="interface_settings_title">Turbo ROM Interface</string>
     <string name="navigation_settings_title">Hardware Settings</string>
+    <string name="performance_settings">Performance</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
