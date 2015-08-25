@@ -1743,4 +1743,7 @@
     <string name="screen_recorder_bitrate_10000000">10000000</string>
     <string name="screen_recorder_bitrate_20000000">20000000</string>
 
+    <!-- Lock screen rotation -->
+    <string name="display_lockscreen_rotation_title">Lock screen</string>
+
 </resources>
