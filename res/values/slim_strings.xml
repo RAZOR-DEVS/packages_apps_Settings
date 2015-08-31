@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012-2014 SlimRoms Project
+     Copyright (C) 2015 TeamRAZOR Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -219,7 +220,7 @@
     <string name="default_string">Default</string>
     <string name="reset_message">Reset all entries to default?</string>
 
-    <!-- Slim settings screens -->
+    <!-- RAZOR settings screens -->
     <string name="header_category_personalization">Personalization</string>
     <string name="interface_settings_title">Interface</string>
     <string name="navigation_settings_title">Navigation</string>
