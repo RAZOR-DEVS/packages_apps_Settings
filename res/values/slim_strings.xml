@@ -1398,8 +1398,8 @@
     <string name="wifi_auto_config_priorities">Automatic priority</string>
 
     <!-- Changelog -->
-    <string name="changelog_tipsy_title">Changelog</string>
-    <string name="changelog_tipsy_error">Unable to load changelog</string>
+    <string name="changelog_razor_title">Changelog</string>
+    <string name="changelog_razor_error">Unable to load changelog</string>
 
 
 </resources>

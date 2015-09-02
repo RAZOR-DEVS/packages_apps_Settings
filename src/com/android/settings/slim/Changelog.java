@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 CrDroid Android
+ * Copyright (C) 2015 Team-Razor
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ public class Changelog extends Fragment {
             }
             text = data.toString();
         } catch (IOException e) {
-            text = getString(R.string.changelog_tipsy_error);
+            text = getString(R.string.changelog_razor_error);
         } finally {
             try {
                 if (inputReader != null) {
