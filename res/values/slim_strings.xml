@@ -1411,7 +1411,7 @@
     <!-- SIM -->
     <string name="sim_no_number_set">No number assigned</string>
 
-    <!-- SlimOTA -->
+    <!-- RazorOTA -->
     <string name="slimota_title">Razor OTA</string>
 
 </resources>
