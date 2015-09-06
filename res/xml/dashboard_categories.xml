@@ -123,6 +123,7 @@
                        android:action="android.intent.action.MAIN"
                        android:targetPackage="com.fusionjack.slimota"
                        android:targetClass="com.fusionjack.slimota.MainActivity" />
+        </dashboard-tile>
 
         <!-- BitSyko Layers App -->
         <dashboard-tile

@@ -1241,19 +1241,23 @@ public class SettingsActivity extends Activity
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
                         removeTile = true;
                     }
-                } else if (id == R.id.performance_settings) {
-                    if (!(pm.hasPowerProfiles())) {
+                }  else if (id == R.id.bitsyko_layers) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
                         removeTile = true;
                     }
+                }  else if (id == R.id.performance_settings) {
+                     if (!(pm.hasPowerProfiles())) {
+                         removeTile = true;
+                     }
                 } else if (id == R.id.slimota) {
                     boolean supported = false;
                     try {
                         supported = (getPackageManager().getPackageInfo("com.fusionjack.slimota", 0).versionCode > 0);
-                    } catch (PackageManager.NameNotFoundException e) {
-                } else if (id == R.id.bitsyko_layers) {
-                    boolean supported = false;
-                    try {
-                        supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
                     } catch (PackageManager.NameNotFoundException e) {
                     }
                     if (!supported) {
