@@ -39,6 +39,11 @@
         android:title="@string/recent_panel_category" />
 
     <PreferenceScreen
+        android:key="live_display"
+        android:title="@string/live_display_title"
+        android:fragment="com.android.settings.livedisplay.LiveDisplay" />
+
+    <PreferenceScreen
         android:key="slim_navigation_settings"
         android:fragment="com.android.settings.slim.NavigationSettings"
         android:title="@string/navigation_settings_title" />
