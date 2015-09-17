@@ -221,7 +221,7 @@
     <string name="reset_message">Reset all entries to default?</string>
 
     <!-- RAZOR settings screens -->
-    <string name="header_category_personalization">Personalization</string>
+    <string name="header_category_personalization">Team-Razor</string>
     <string name="interface_settings_title">Razor World</string>
     <string name="navigation_settings_title">Navigation</string>
 
