@@ -55,7 +55,7 @@
     <string name="slim_shortcut_picker">Slim Actions</string>
 
     <!-- About phone screen, Razor version -->
-    <string name="razor_version_title">Razor version</string>
+    <string name="razor_version_title">Razor Version</string>
     <string name="razor_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
@@ -373,7 +373,7 @@
     <string name="profile_reset_title">Reset</string>
 
     <!-- Status bar -->
-    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_title">Status Bar</string>
     <string name="status_bar_style_title">Style</string>
     <string name="status_bar_options_title">Options</string>
 
@@ -811,7 +811,7 @@
     <string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
     <string name="navigation_menu_never_show">Never show</string>
     <string name="navigation_menu_always_show">Always show</string>
-    <string name="navigation_bar">Navigation bar</string>
+    <string name="navigation_bar">Navigation Bar</string>
     <string name="navbar_button_cat">Navigation bar buttons</string>
     <string name="title_pref_menu_location">Menu location</string>
     <string name="summary_pref_menu_location">Where do you want the menu buttons to appear?</string>
@@ -894,7 +894,7 @@
     <string name="heads_up_time_out_never">Never</string>
 
     <!-- Pie Control -->
-    <string name="pie_control_title">SlimPIE</string>
+    <string name="pie_control_title">PIE Control</string>
     <string name="pie_control_summary">Enable pie controls</string>
     <string name="pie_control_size">Navigation size</string>
     <string name="pie_control_trigger_positions">Trigger options</string>
@@ -944,7 +944,7 @@
 
     <!-- Recent panel -->
     <string name="recent_panel_category">Recent apps panel</string>
-    <string name="use_slim_recents_title">SlimRecents</string>
+    <string name="use_slim_recents_title">Slim Recents</string>
     <string name="show_running_tasks_title">Only show running apps</string>
     <string name="recents_show_searchbar">Show search bar in recents menu</string>
     <string name="recents_max_apps_title">Max allowed apps</string>
@@ -1025,7 +1025,7 @@
     <string name="auto_brightness_reset_button">Reset</string>
 
     <!-- LiveDisplay -->
-    <string name="live_display_title" translatable="false">LiveDisplay</string>
+    <string name="live_display_title" translatable="false">Live Display</string>
     <string name="live_display_summary">Optimize your screen based on time of day and ambient conditions to improve readibility and reduce eyestrain</string>
     <string name="live_display_mode">Display mode</string>
     <string name="live_display_color_temperature_title">Color temperature</string>
