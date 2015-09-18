@@ -70,7 +70,7 @@
         <SwitchPreference
                 android:key="vibrate_when_ringing"
                 android:title="@string/vibrate_when_ringing_title"
-                android:persistent="false" />
+                android:persistent="false" /
 
         <!-- Interruptions -->
         <PreferenceScreen
