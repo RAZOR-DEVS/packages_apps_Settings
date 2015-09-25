@@ -223,7 +223,7 @@
     <!-- RAZOR settings screens -->
     <string name="header_category_personalization">Team-Razor</string>
     <string name="interface_settings_title">Razor Interface</string>
-    <string name="navigation_settings_title">Navigation</string>
+    <string name="navigation_settings_title">Hardware Settings</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
