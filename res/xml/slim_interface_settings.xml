@@ -19,15 +19,9 @@
     android:title="@string/interface_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-
     <!-- Team-Razor logo -->
     <PreferenceScreen android:key="razor_logo"
         android:layout="@layout/razor_logo_row" />
-
-    <PreferenceScreen
-        android:id="@+id/app_circle_sidebar"
-        android:title="@string/app_circle_bar_title"
-        android:fragment="com.android.settings.terminus.AppCircleSidebar" />
 
     <PreferenceScreen
         android:key="translator"
