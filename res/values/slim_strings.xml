@@ -801,7 +801,7 @@
     <string name="shortcut_action_voice_search">Voice search</string>
     <string name="shortcut_action_none">None</string>
 
-    <string name="navigation_settings_title">Navigation</string>
+    <string name="navigation_settings_title">Hardware</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
