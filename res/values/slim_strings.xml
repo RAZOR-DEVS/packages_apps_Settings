@@ -222,8 +222,8 @@
 
     <!-- RAZOR settings screens -->
     <string name="header_category_personalization">Team-Razor</string>
-    <string name="interface_settings_title">Razor World</string>
-    <string name="navigation_settings_title">Navigation</string>
+    <string name="interface_settings_title">Razor Interface</string>
+    <string name="navigation_settings_title">Hardware Settings</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -506,6 +506,7 @@
     <string name="qs_tile_screenshot">Screenshot</string>
     <string name="qs_expanded_desktop_tile">Expanded desktop</string>
     <string name="qs_tile_notifications">Notifications</string>
+    <string name="qs_music_play_tile">Play</string>
 
     <string name="qs_main_tiles_title">Enlarge first row</string>
     <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
@@ -573,6 +574,7 @@
     <string name="shortcut_action_users">Users</string>
     <string name="shortcut_action_lockdown">Lock now</string>
 
+    <string name="shortcut_action_screenrecord">Screen recorder</string>
     <string name="shortcut_action_longpress">Longpress:</string>
     <string name="shortcut_action_select_action_longpress">Choose longpress action:</string>
     <string name="shortcut_action_select_action">Choose action:</string>
@@ -763,6 +765,7 @@
     <string name="keys_action_long">Long press</string>
     <string name="keys_action_double">Double tap</string>
     <string name="no_home_key">You have no button assigned any more to the \"Home\" action!\n\nThis can make your device unusable!</string>
+    <string name="no_back_key">You have no button assigned any more to the \"Back\" action!\n\nThis can make your device unusable!</string>
 
     <!-- Button shorcut actions -->
     <string name="shortcut_action_back">Back</string>
@@ -793,7 +796,7 @@
     <string name="shortcut_action_voice_search">Voice search</string>
     <string name="shortcut_action_none">None</string>
 
-    <string name="navigation_settings_title">Navigation</string>
+    <string name="navigation_settings_title">Hardware</string>
 
     <!-- Navigation bar -->
     <string name="navigation_bar_size_42_dp_default">42 dp (default)</string>
@@ -1429,7 +1432,7 @@
     <string name="slimota_title">Razor OTA</string>
 
     <!-- Razor Extra Info -->
-    <string name="razorextrainfo">Extra information</string>
+    <string name="razorextrainfo">Additional information</string>
     <string name="razorextrainfo_summary">Display extra info for cpu, display, etc</string>
 
     <!-- SuperSU -->
@@ -1564,6 +1567,9 @@
     <!-- Title for preference that guides the user through creating an unlock gesture [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_gesture_summary">Low security, experimental</string>
 
+    <!-- Screen and animations -->
+    <string name="screen_and_animations_title">Screen and animations</string>
+
     <!-- Summary for "Configure lockscreen" when security gesture is enabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_gesture">Gesture</string>
     
@@ -1592,5 +1598,146 @@
     <string name="volume_steps_15">15</string>
     <string name="volume_steps_7">7</string>
     <string name="volume_steps_5">5</string>
+
+    <!-- Sizes for pattern lockscreen -->
+    <string name="lock_pattern_size_3" translatable="false">3 \u00d7 3</string>
+    <string name="lock_pattern_size_4" translatable="false">4 \u00d7 4</string>
+    <string name="lock_pattern_size_5" translatable="false">5 \u00d7 5</string>
+    <string name="lock_pattern_size_6" translatable="false">6 \u00d7 6</string>
+
+    <!-- Whether a visible red line will be drawn after the user has drawn the unlock pattern incorrectly -->
+    <string name="lockpattern_settings_enable_error_path_title">Show pattern error</string>
+    <!-- Whether the dots will be drawn when using the lockscreen pattern -->
+    <string name="lockpattern_settings_enable_dots_title">Show pattern dots</string>
+
+    <!-- Lock clock -->
+    <string name="lock_clock_title">Clock widget</string>
+    <string name="lock_clock_summary">View or change how the \'cLock\' Home widget will display</string>
+    <string name="lock_clock_clock_section_title">Clock and alarm</string>
+    <string name="lock_clock_clock_section_summary">View or change how the clock of the \'cLock\' Home widget will display</string>
+    <string name="lock_clock_weather_section_title">Weather panel</string>
+    <string name="lock_clock_weather_section_summary">View or change how the weather of the \'cLock\' Home widget will display</string>
+    <string name="lock_clock_calendar_section_title">Calendar events</string>
+    <string name="lock_clock_calendar_section_summary">View or change how the calendar of the \'cLock\' Home widget will display</string>
+
+    <!-- Toast animations -->
+    <string name="toast_animation_title">Toast animations</string>
+    <string name="toast_animation_summary">Select and preview system toast animation</string>
+    <string name="toast_none_animation">None</string>
+    <string name="toast_default_animation">Default</string>
+    <string name="toast_fade_animation">Fade animation</string>
+    <string name="toast_SlideRight_animation">Slide right</string>
+    <string name="toast_SlideLeft_animation">Slide left</string>
+    <string name="toast_Xylon_animation">Xylon animation</string>
+    <string name="toast_Toko_animation">Toko animation</string>
+    <string name="toast_Tn_animation">Tn animation</string>
+    <string name="toast_Honami_animation">Honami animation</string>
+    <string name="toast_FastFade_animation">Fast fade</string>
+    <string name="toast_GrowFade_animation">Grow fade</string>
+    <string name="toast_GrowFadeCenter_animation">Grow fade center</string>
+    <string name="toast_GrowFadeBottom_animation">Grow fade bottom</string>
+    <string name="toast_Translucent_animation">Translucent animation</string>
+    <string name="toast_SlideLeftRight_animation">Slide left to right</string>
+    <string name="toast_SlideRightLeft_animation">Slide right to left</string>
+
+    <!-- ListView animation -->
+    <string name="interface_settings_animation_title">Animation options</string>
+    <string name="listview_animation_title">ListView animation</string>
+    <string name="listview_off">Default</string>
+    <string name="listview_wave_left">Wave (left)</string>
+    <string name="listview_wave_right">Wave (right)</string>
+    <string name="listview_alpha">Alpha</string>
+    <string name="listview_scale">Scale</string>
+    <string name="listview_stack_top">Stack (top)</string>
+    <string name="listview_stack_bottom">Stack (bottom)</string>
+    <string name="listview_unfold">Unfold</string>
+    <string name="listview_fold">Fold</string>
+    <string name="listview_translate_left">Translate (left)</string>
+    <string name="listview_translate_right">Translate (right)</string>
+
+    <!-- ListView interpolator -->
+    <string name="listview_interpolator_title">ListView interpolator</string>
+    <string name="listview_accelerate_interpolator">Accelerate</string>
+    <string name="listview_decelerate_interpolator">Decelerate</string>
+    <string name="listview_accelerate_decelerate_interpolator">Accelerate and decelerate</string>
+    <string name="listview_anticipate_interpolator">Anticipate</string>
+    <string name="listview_overshoot_interpolator">Overshoot</string>
+    <string name="listview_anticipate_overshoot_interpolator">Anticipate and overshoot</string>
+    <string name="listview_bounce_interpolator">Bounce</string>
+
+    <!-- Network traffic -->
+    <string name="network_traffic_title">Network traffic</string>
+    <string name="show_network_traffic_state">Status bar traffic monitor</string>
+    <string name="network_traffic_summary">Enable various network traffic options in statusbar</string>
+    <string name="show_network_traffic_unit">Display unit</string>
+    <string name="show_network_traffic_frequency">Update interval</string>
+    <string name="show_network_traffic_disable">Disabled</string>
+    <string name="show_network_traffic_up">Outgoing</string>
+    <string name="show_network_traffic_down">Incoming</string>
+    <string name="show_network_traffic_all">Outgoing and incoming</string>
+    <string name="show_network_traffic_bit">Bits per second</string>
+    <string name="show_network_traffic_byte">Bytes per second</string>
+    <string name="show_network_traffic_500">500 ms</string>
+    <string name="show_network_traffic_1000">1000 ms</string>
+    <string name="show_network_traffic_1500">1500 ms</string>
+    <string name="show_network_traffic_2000">2000 ms</string>
+    <string name="network_traffic_autohide">Auto hide</string>
+    <string name="network_traffic_autohide_summary">Hide the traffic monitor when there is no activity</string>
+    <string name="network_traffic_hide_arrow">Hide arrows</string>
+    <string name="network_traffic_hide_arrow_summary">Hide the traffic arrow indicator</string>
+    <string name="network_traffic_autohide_threshold">Inactivity threshold</string>
+    <string name="network_traffic_color_style">Color style</string>
+    <string name="network_traffic_color_reset">Reset color</string>
+    <string name="network_traffic_color_reset_message">Reset network traffic color to default?</string>
+
+    <!-- Show carrier label and custom color -->
+    <string name="carrier_options">Carrier Label</string>
+    <string name="show_status_bar_carrier_title">Status bar carrier</string>
+    <string name="show_status_bar_carrier_summary">Show carrier in status bar</string>
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
+    <string name="status_bar_carrier_color">Carrier label color</string>
+
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Double-tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
+
+   <!-- Screen recorder -->
+    <string name="screen_recorder_title">Screen Recorder</string>
+    <string name="screen_recorder_summary">Adjust screen recorder settings</string>
+    <string name="screen_recorder_video_dimensions_title">Video size</string>
+    <string name="screen_recorder_video_bitrate_title">Bitrate</string>
+    <string name="screen_recorder_record_audio_title">External audio</string>
+    <string name="screen_recorder_record_audio_summary">Record audio from the microphone</string>
+    <!-- video sizes -->
+    <string name="screen_recorder_size_240x400">240x400</string>
+    <string name="screen_recorder_size_360x640">360x640</string>
+    <string name="screen_recorder_size_480x800">480x800</string>
+    <string name="screen_recorder_size_480x854">480x854</string>
+    <string name="screen_recorder_size_540x960">540x960</string>
+    <string name="screen_recorder_size_600x1024">600x1024</string>
+    <string name="screen_recorder_size_720x1280">720x1280</string>
+    <!-- frame rates -->
+    <string name="screen_recorder_bitrate_title_100000">100 kB/s</string>
+    <string name="screen_recorder_bitrate_title_250000">250 kB/s</string>
+    <string name="screen_recorder_bitrate_title_500000">500 kB/s</string>
+    <string name="screen_recorder_bitrate_title_1000000">1 MB/s</string>
+    <string name="screen_recorder_bitrate_title_2000000">2 MB/s</string>
+   <string name="screen_recorder_bitrate_title_3000000">3 MB/s</string>
+    <string name="screen_recorder_bitrate_title_4000000">4 MB/s</string>
+    <string name="screen_recorder_bitrate_title_5000000">5 MB/s</string>
+    <string name="screen_recorder_bitrate_title_10000000">10 MB/s</string>
+    <string name="screen_recorder_bitrate_title_20000000">20 MB/s</string>
+    <string name="screen_recorder_bitrate_100000">100000</string>
+    <string name="screen_recorder_bitrate_250000">250000</string>
+    <string name="screen_recorder_bitrate_500000">500000</string>
+    <string name="screen_recorder_bitrate_1000000">1000000</string>
+    <string name="screen_recorder_bitrate_2000000">2000000</string>
+    <string name="screen_recorder_bitrate_3000000">3000000</string>
+    <string name="screen_recorder_bitrate_4000000">4000000</string>
+    <string name="screen_recorder_bitrate_5000000">5000000</string>
+    <string name="screen_recorder_bitrate_10000000">10000000</string>
+    <string name="screen_recorder_bitrate_20000000">20000000</string>
 
 </resources>
