@@ -19,13 +19,13 @@
     android:title="@string/interface_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- Team-Razor logo -->
+    <!-- Turbo ROM logo logo -->
     <PreferenceScreen android:key="turbo_logo"
         android:layout="@layout/turbo_logo_row" />
 
     <PreferenceScreen
         android:key="translator"
-        android:title="@string/changelog_razor_title"
+        android:title="@string/changelog_turbo_title"
         android:fragment="com.android.settings.slim.Changelog" />
 
     <PreferenceScreen

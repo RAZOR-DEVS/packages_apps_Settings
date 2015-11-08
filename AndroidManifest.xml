@@ -2147,8 +2147,8 @@
         <activity android:name=".notificationlight.BatteryLightSettings" />
         <activity android:name=".slim.PerformanceSettings" />
 
-        <!-- Razor Extra info -->
-        <activity android:name="com.android.settings.razor.extrainfo.MainActivity"
+        <!-- Turbo Extra info -->
+        <activity android:name="com.android.settings.turbo.extrainfo.MainActivity"
                   android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

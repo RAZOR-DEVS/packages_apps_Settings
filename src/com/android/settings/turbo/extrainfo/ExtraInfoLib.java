@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2014 The Dirty Unicorns project
- * Copyright (C) 2015 The Team-Razor project
+ * Copyright (C) 2015 The Turbo ROM project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.razor.extrainfo;
+package com.android.settings.turbo.extrainfo;
 
 import java.io.BufferedReader;
 import java.io.IOException;

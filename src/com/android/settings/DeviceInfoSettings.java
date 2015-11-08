@@ -77,8 +77,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
-    private static final String KEY_RAZOR_VERSION = "razor_version";
-    private static final String KEY_RAZOR_BUILD_DATE = "build_date";
+    private static final String KEY_TURBO_VERSION = "turbo_version";
+    private static final String KEY_TURBO_BUILD_DATE = "build_date";
     private static final String KEY_SECURITY_PATCH = "security_patch";
     private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
@@ -105,8 +105,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             getPreferenceScreen().removePreference(findPreference(KEY_SECURITY_PATCH));
 
         }
-        setValueSummary(KEY_RAZOR_VERSION, "ro.razor.version");
-        setValueSummary(KEY_RAZOR_BUILD_DATE, "ro.build.date");
+        setValueSummary(KEY_TURBO_VERSION, "ro.turbo.version");
+        setValueSummary(KEY_TURBO_BUILD_DATE, "ro.build.date");
         setValueSummary(KEY_BASEBAND_VERSION, "gsm.version.baseband");
         setStringSummary(KEY_DEVICE_MODEL, Build.MODEL + getMsvSuffix());
         setValueSummary(KEY_EQUIPMENT_ID, PROPERTY_EQUIPMENT_ID);
