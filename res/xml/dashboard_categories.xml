@@ -98,7 +98,7 @@
                 android:title="@string/interface_settings_title"
                 />
 
-        <!-- Razor OTA -->
+        <!-- Turbo OTA -->
         <dashboard-tile
                android:id="@+id/slimota"
                android:title="@string/slimota_title"
