@@ -56,6 +56,12 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
     // Preferences
     private static final String USE_SLIM_RECENTS = "use_slim_recents";
     private static final String ONLY_SHOW_RUNNING_TASKS = "only_show_running_tasks";
+
+    private static final String RECENTS_SHOW_SEARCH_BAR = "recents_show_search_bar";
+    private static final String RECENTS_SHOW_CLEAR_ALL = "show_clear_all_recents";
+    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
+    private static final String SCREEN_PINNING = "screen_pinning_settings";
+
     private static final String RECENTS_MAX_APPS = "max_apps";
     private static final String RECENT_PANEL_SHOW_TOPMOST =
             "recent_panel_show_topmost";
@@ -74,6 +80,12 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
 
     private SwitchPreference mUseSlimRecents;
     private SwitchPreference mShowRunningTasks;
+
+    private SwitchPreference mShowClearAll;
+    private SwitchPreference mShowSearchBar;
+    private ListPreference mRecentsClearAllLocation;
+    private PreferenceScreen mScreenPinning;
+
     private SlimSeekBarPreference mMaxApps;
     private SwitchPreference mRecentsShowTopmost;
     private SwitchPreference mRecentPanelLeftyMode;
@@ -97,10 +109,17 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         if (preference == mUseSlimRecents) {
             Settings.System.putInt(getContentResolver(), Settings.System.USE_SLIM_RECENTS,
                     ((Boolean) newValue) ? 1 : 0);
+            updateStockRecents(!((Boolean) newValue));
             return true;
         } else if (preference == mShowRunningTasks) {
             Settings.System.putInt(getContentResolver(), Settings.System.RECENT_SHOW_RUNNING_TASKS,
                     ((Boolean) newValue) ? 1 : 0);
+            return true;
+        } else if (preference == mRecentsClearAllLocation) {
+            int location = Integer.valueOf((String) newValue);
+            Settings.System.putInt(getContentResolver(), Settings.System.RECENTS_CLEAR_ALL_LOCATION,
+                     location);
+            updateRecentsLocation(location);
             return true;
         } else if (preference == mRecentPanelScale) {
             int value = Integer.parseInt((String) newValue);
@@ -234,6 +253,35 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         final int recentExpandedMode = Settings.System.getInt(getContentResolver(),
                 Settings.System.RECENT_PANEL_EXPANDED_MODE, 0);
         mRecentPanelExpandedMode.setValue(recentExpandedMode + "");
+
+        final int location = Settings.System.getInt(getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0);
+        mRecentsClearAllLocation.setValue(String.valueOf(location));
+        updateRecentsLocation(location);
+
+       final boolean useSlimRecent = Settings.System.getInt(getContentResolver(),
+                Settings.System.USE_SLIM_RECENTS, 0) == 1;
+       updateStockRecents(!useSlimRecent);
+
+       final boolean screenPinning = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCK_TO_APP_ENABLED, 0) == 1;
+       if (mScreenPinning != null) {
+           mScreenPinning.setSummary(screenPinning ?
+               getResources().getString(R.string.switch_on_text) :
+               getResources().getString(R.string.switch_off_text));
+       }
+    }
+
+    private void updateStockRecents(boolean enable) {
+        if (mShowSearchBar != null) {
+            mShowSearchBar.setEnabled(enable);
+        }
+        if (mShowClearAll != null) {
+            mShowClearAll.setEnabled(enable);
+        }
+        if (mScreenPinning != null) {
+            mScreenPinning.setEnabled(enable);
+        }
     }
 
     private void initializeAllPreferences() {
@@ -242,6 +290,14 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
 
         mShowRunningTasks = (SwitchPreference) findPreference(ONLY_SHOW_RUNNING_TASKS);
         mShowRunningTasks.setOnPreferenceChangeListener(this);
+
+        mShowSearchBar = (SwitchPreference) findPreference(RECENTS_SHOW_SEARCH_BAR);
+        mShowClearAll = (SwitchPreference) findPreference(RECENTS_SHOW_CLEAR_ALL);
+
+        mRecentsClearAllLocation = (ListPreference) findPreference(RECENTS_CLEAR_ALL_LOCATION);
+        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
+
+        mScreenPinning = (PreferenceScreen) findPreference(SCREEN_PINNING);
 
         mMaxApps = (SlimSeekBarPreference) findPreference(RECENTS_MAX_APPS);
         mMaxApps.setOnPreferenceChangeListener(this);
@@ -318,6 +374,34 @@ public class RecentPanel extends SettingsPreferenceFragment implements DialogCre
         mRecentPanelExpandedMode =
                 (ListPreference) findPreference(RECENT_PANEL_EXPANDED_MODE);
         mRecentPanelExpandedMode.setOnPreferenceChangeListener(this);
+    }
+
+    private void updateRecentsLocation(int value) {
+        int summary = -1;
+
+        Settings.System.putInt(getContentResolver(),
+            Settings.System.RECENTS_CLEAR_ALL_LOCATION, value);
+
+        if (value == 0) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0);
+            summary = R.string.recents_clear_all_location_top_right;
+        } else if (value == 1) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 1);
+            summary = R.string.recents_clear_all_location_top_left;
+        } else if (value == 2) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 2);
+            summary = R.string.recents_clear_all_location_bottom_right;
+        } else if (value == 3) {
+            Settings.System.putInt(getContentResolver(),
+                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 3);
+            summary = R.string.recents_clear_all_location_bottom_left;
+        }
+        if (mRecentsClearAllLocation != null && summary != -1) {
+            mRecentsClearAllLocation.setSummary(getResources().getString(summary));
+        }
     }
 
 }

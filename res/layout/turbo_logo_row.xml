@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2014 The LiquidSmooth Project
      Copyright (C) 2015 SlimRoms
-     Copyright (C) 2015 Team-Razor
+     Copyright (C) 2015 Turbo ROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -24,6 +24,6 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/razor_logo"
+            android:src="@drawable/turbo_logo"
          />
 </LinearLayout>

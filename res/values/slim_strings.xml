@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012-2014 SlimRoms Project
-     Copyright (C) 2015 TeamRAZOR Project
+     Copyright (C) 2015 Turbo ROM Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -54,9 +54,9 @@
     <!-- Slim Shortcuts -->
     <string name="slim_shortcut_picker">Slim Actions</string>
 
-    <!-- About phone screen, Razor version -->
-    <string name="razor_version_title">Razor Version</string>
-    <string name="razor_version_default">Unknown</string>
+    <!-- About phone screen, Turbo version -->
+    <string name="turbo_version_title">Turbo ROM Version</string>
+    <string name="turbo_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
     <string name="build_date_default">Unknown</string>
@@ -220,10 +220,12 @@
     <string name="default_string">Default</string>
     <string name="reset_message">Reset all entries to default?</string>
 
-    <!-- RAZOR settings screens -->
-    <string name="header_category_personalization">Team-Razor</string>
-    <string name="interface_settings_title">Razor Interface</string>
+    <!-- Turbo settings screens -->
+    <string name="header_category_personalization">Turbo ROM Settings</string>
+    <string name="interface_settings_title">Turbo ROM Interface</string>
     <string name="navigation_settings_title">Hardware Settings</string>
+    <string name="performance_settings">Performance</string>
+    <string name="kernel_tweaks">Kernel Settings</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -504,7 +506,7 @@
     <string name="qs_tile_screen_timeout">Screen timeout</string>
     <string name="qs_tile_sync">Sync</string>
     <string name="qs_tile_usb_tether">USB tethering</string>
-    <string name="qs_tile_visualizer">AudioFX</string>
+    <string name="qs_tile_visualizer">ViPER4Android</string>
     <string name="qs_tile_wifi">Wi\u2011Fi</string>
     <string name="qs_tile_screenshot">Screenshot</string>
     <string name="qs_expanded_desktop_tile">Expanded desktop</string>
@@ -950,6 +952,10 @@
 
     <!-- Recent panel -->
     <string name="recent_panel_category">Recent apps panel</string>
+    <string name="general_recent_category">General</string>
+    <string name="stock_recent_category">Stock recents</string>
+    <string name="slim_recent_category">Slim Recents</string>
+    
     <string name="use_slim_recents_title">Slim Recents</string>
     <string name="show_running_tasks_title">Only show running apps</string>
     <string name="recents_show_searchbar">Show search bar in recents menu</string>
@@ -1421,8 +1427,8 @@
     <string name="wifi_auto_config_priorities">Automatic priority</string>
 
     <!-- Changelog -->
-    <string name="changelog_razor_title">Changelog</string>
-    <string name="changelog_razor_error">Unable to load changelog</string>
+    <string name="changelog_turbo_title">Changelog</string>
+    <string name="changelog_turbo_error">Unable to load changelog</string>
 
     <!-- Appops -->
     <string name="appops_manager_title">Appops</string>
@@ -1431,12 +1437,12 @@
     <!-- SIM -->
     <string name="sim_no_number_set">No number assigned</string>
 
-    <!-- RazorOTA -->
-    <string name="slimota_title">Razor OTA</string>
+    <!-- TurboOTA -->
+    <string name="slimota_title">Turbo OTA</string>
 
-    <!-- Razor Extra Info -->
-    <string name="razorextrainfo">Additional information</string>
-    <string name="razorextrainfo_summary">Display extra info for cpu, display, etc</string>
+    <!-- Turbo Extra Info -->
+    <string name="turboextrainfo">Additional information</string>
+    <string name="turboextrainfo_summary">Display extra info for cpu, display, etc</string>
 
     <!-- SuperSU -->
     <string name="supersu_title">SuperSU</string>

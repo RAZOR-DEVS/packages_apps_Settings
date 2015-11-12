@@ -17,8 +17,11 @@
 package com.android.settings.fuelgauge;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
@@ -65,8 +68,9 @@ public class PowerUsageSummary extends PreferenceFragment {
 
     private static final int MENU_STATS_TYPE = Menu.FIRST;
     private static final int MENU_STATS_REFRESH = Menu.FIRST + 1;
-    private static final int MENU_BATTERY_SAVER = Menu.FIRST + 2;
-    private static final int MENU_HELP = Menu.FIRST + 3;
+    private static final int MENU_STATS_RESET = Menu.FIRST + 2;
+    private static final int MENU_BATTERY_SAVER = Menu.FIRST + 3;
+    private static final int MENU_HELP = Menu.FIRST + 4;
 
     private UserManager mUm;
 
@@ -192,6 +196,11 @@ public class PowerUsageSummary extends PreferenceFragment {
                 .setAlphabeticShortcut('r');
         refresh.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
                 MenuItem.SHOW_AS_ACTION_WITH_TEXT);
+        MenuItem reset = menu.add(0, MENU_STATS_RESET, 0, R.string.menu_stats_reset)
+                .setIcon(com.android.internal.R.drawable.ic_menu_delete)
+                .setAlphabeticShortcut('d');
+        reset.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
+                MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
         MenuItem batterySaver = menu.add(0, MENU_BATTERY_SAVER, 0, R.string.battery_saver);
         batterySaver.setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
@@ -214,6 +223,9 @@ public class PowerUsageSummary extends PreferenceFragment {
                 }
                 refreshStats();
                 return true;
+            case MENU_STATS_RESET:
+                resetStats();
+                return true;
             case MENU_STATS_REFRESH:
                 mStatsHelper.clearStats();
                 refreshStats();
@@ -229,6 +241,25 @@ public class PowerUsageSummary extends PreferenceFragment {
         }
     }
 
+    private void resetStats() {
+        AlertDialog dialog = new AlertDialog.Builder(getActivity())
+            .setTitle(R.string.menu_stats_reset)
+            .setMessage(R.string.reset_stats_msg)
+            .setPositiveButton(android.R.string.ok, new OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // Reset stats and request a refresh to initialize vars
+                    mStatsHelper.resetStatistics();
+                    refreshStats();
+                    mHandler.removeMessages(MSG_REFRESH_STATS);
+                }
+            })
+            .setNegativeButton(android.R.string.cancel, null)
+            .create();
+        dialog.show();
+    }
+    
+    
     private void addNotAvailableMessage() {
         Preference notAvailable = new Preference(getActivity());
         notAvailable.setTitle(R.string.power_usage_not_available);
@@ -251,7 +282,9 @@ public class PowerUsageSummary extends PreferenceFragment {
     }
 
     private void refreshStats() {
-        mAppListGroup.removeAll();
+    	final BatteryStats stats = mStatsHelper.getStats();
+    	
+    	mAppListGroup.removeAll();
         mAppListGroup.setOrderingAsAdded(false);
         mHistPref = new BatteryHistoryPreference(getActivity(), mStatsHelper.getStats(),
                 mStatsHelper.getBatteryBroadcast());
@@ -264,7 +297,6 @@ public class PowerUsageSummary extends PreferenceFragment {
                 DevelopmentSettings.SHOW_UNAC_AND_OVERCOUNTED_STATS, false);
 
         final PowerProfile powerProfile = mStatsHelper.getPowerProfile();
-        final BatteryStats stats = mStatsHelper.getStats();
         final double averagePower = powerProfile.getAveragePower(PowerProfile.POWER_SCREEN_FULL);
         if (averagePower >= MIN_AVERAGE_POWER_THRESHOLD_MILLI_AMP) {
             final List<UserHandle> profiles = mUm.getUserProfiles();

@@ -17,9 +17,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <PreferenceScreen android:key="razor_logo"
+        <PreferenceScreen android:key="turbo_logo"
                           android:enabled="false"
-                          android:layout="@layout/razor_logo_row" />
+                          android:layout="@layout/turbo_logo_row" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
@@ -30,13 +30,13 @@
                     android:targetClass="com.android.settings.deviceinfo.Status" />
         </PreferenceScreen>
 
-        <!-- Razor Extra Info -->
+        <!-- Turbo Extra Info -->
         <PreferenceScreen android:key="extrainfo"
-                android:title="@string/razorextrainfo"
-                android:summary="@string/razorextrainfo_summary">
+                android:title="@string/turboextrainfo"
+                android:summary="@string/turboextrainfo_summary">
             <intent android:action="android.intent.action.MAIN"
                     android:targetPackage="com.android.settings"
-                    android:targetClass="com.android.settings.razor.extrainfo.MainActivity" />
+                    android:targetClass="com.android.settings.turbo.extrainfo.MainActivity" />
         </PreferenceScreen>
 
         <!-- Legal Information -->
@@ -126,11 +126,11 @@
                 android:title="@string/security_patch"
                 android:summary="@string/device_info_default"/>
 
-        <!-- Razor firmware version -->
-        <Preference android:key="razor_version"
+        <!-- Turbo firmware version -->
+        <Preference android:key="turbo_version"
                 style="?android:preferenceInformationStyle"
-                android:title="@string/razor_version_title"
-                android:summary="@string/razor_version_default"/>
+                android:title="@string/turbo_version_title"
+                android:summary="@string/turbo_version_default"/>
 
         <!-- Build date -->
         <Preference android:key="build_date"
